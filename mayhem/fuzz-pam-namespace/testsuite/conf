@@ -1,0 +1,4 @@
+/tmp     /tmp-inst/       level      root,adm
+/var/tmp /var/tmp/tmp-inst/   level:iscript=ns.init  root,adm
+$HOME    $HOME/$USER.inst/     user:shared,noinit,mntopts=size=1M  ~root
+/run/x  /run/x-inst  tmpfs:create=0755,root,root  @wheel

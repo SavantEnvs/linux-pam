@@ -1,0 +1,18 @@
+pam_env.open_session=0
+env.FOO=bar
+env.BAZ=bar-x
+env.QUX=two words
+env.ENVF=fromfile
+env.EXP=1
+env.MISSING=(null)
+env.FOO.after_delete=(null)
+pam_time.deny_all=Permission denied
+pam_time.allow_all=Success
+pam_access.10.1.2.3=Permission denied
+pam_access.10.9.9.9=Success
+pam_succeed_if[uid >= 0]=Success
+pam_succeed_if[uid < 0]=Authentication failure
+pam_succeed_if[user = nosuchuser-xyz]=Authentication failure
+pam_succeed_if[service in svc:other]=Success
+stack.include_permit=Success
+stack.requisite_deny=Authentication failure

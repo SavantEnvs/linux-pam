@@ -1,0 +1,10 @@
+project: savantenvs/linux-pam
+target: fuzz-pam-env
+
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_pam_env
+    libfuzzer: true
+    timeout: 5
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-pam-env/testsuite
